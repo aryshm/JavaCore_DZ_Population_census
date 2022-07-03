@@ -23,7 +23,7 @@ public class Main {
         List<String> recruiting = persons.stream()
                 .filter(x -> x.getSex().equals(Sex.MAN))
                 .filter(x -> x.getAge() >= 18 && x.getAge() < 27)
-                .map(x -> x.getFamily())
+                .map(Person::getFamily)
                 .collect(Collectors.toList());
 
         List<Person> potentiallyWorkable = persons.stream()
